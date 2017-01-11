@@ -19,6 +19,7 @@
 
 (load "stu-bindings.el")
 (load "stu-clojure.el")
+(load "stu-company.el")
 (load "stu-editor.el")
 (load "stu-shell.el")
 (load "stu-flx-ido.el")
