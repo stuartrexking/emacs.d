@@ -27,3 +27,4 @@
 (load "stu-rainbow-delimiters.el")
 (load "stu-projectile.el")
 (load "stu-solarized-theme.el")
+(load "stu-yasnippet.el")
