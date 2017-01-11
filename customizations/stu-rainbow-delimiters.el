@@ -1,7 +1,5 @@
 (require 'use-package)
 
-(use-package rainbow-delimiters
-  :init
-  :config
-  (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
+(use-package rainbow-delimiters)
 
+(add-hook 'emacs-lisp-mode-hook #'rainbow-delimiters-mode)
