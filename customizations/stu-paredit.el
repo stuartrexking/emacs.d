@@ -16,3 +16,4 @@
     (add-hook 'clojure-mode-hook #'parinfer-mode)
     (add-hook 'emacs-lisp-mode-hook #'parinfer-mode)))
 
+(show-paren-mode)
