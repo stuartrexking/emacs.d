@@ -24,6 +24,7 @@
 (load "stu-shell.el")
 (load "stu-flx-ido.el")
 (load "stu-markdown.el")
+(load "stu-navigation.el")
 (load "stu-paredit.el")
 (load "stu-rainbow-delimiters.el")
 (load "stu-projectile.el")
