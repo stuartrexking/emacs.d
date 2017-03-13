@@ -39,3 +39,7 @@
 (setq calendar-week-start-day 1)
 
 (custom-set-faces)
+
+;; turnoff backups and auto-save
+(setq auto-save-default nil)
+(setq make-backup-files nil)
