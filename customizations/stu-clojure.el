@@ -10,3 +10,7 @@
        (figwheel-sidecar.repl-api/cljs-repl))"))
 
 (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
+
+(defun clojure-mode-customizations-hook ())
+  
+(add-hook 'clojure-mode-hook 'clojure-mode-customizations-hook)
