@@ -43,3 +43,9 @@
 ;; turnoff backups and auto-save
 (setq auto-save-default nil)
 (setq make-backup-files nil)
+
+;; zap up to char
+(autoload 'zap-up-to-char "misc"
+  "Kill up to, but not including ARGth occurrence of CHAR.")
+
+(global-set-key (kbd "M-z") 'zap-up-to-char)
