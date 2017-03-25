@@ -16,6 +16,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/customizations")
 
+(load "stu-avy.el")
 (load "stu-bindings.el")
 (load "stu-clojure.el")
 (load "stu-company.el")
@@ -39,7 +40,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (yasnippet use-package solarized-theme rainbow-delimiters projectile parinfer paredit markdown-mode flx-ido company clojure-mode-extra-font-locking cider))))
+    (avy yasnippet use-package solarized-theme rainbow-delimiters projectile parinfer paredit markdown-mode flx-ido company clojure-mode-extra-font-locking cider))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
