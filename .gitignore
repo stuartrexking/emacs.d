@@ -3,3 +3,5 @@ elpa
 ido.last
 projectile*
 session.*
+/recentf
+/helm-adaptive-history
