@@ -11,21 +11,15 @@
   (require 'helm-config)
 
   (global-set-key (kbd "C-c M-x")     'execute-extended-command) ; old M-x
-  (global-set-key (kbd "C-x C-d")     'helm-browse-project)
   (global-set-key (kbd "C-h C-f")     'helm-apropos)
-  (global-set-key (kbd "C-h r")       'helm-info-emacs)
-  (global-set-key (kbd "C-h i")       'helm-info-at-point)
-  (global-set-key (kbd "C-:")         'helm-eval-expression-with-eldoc)
-  (global-set-key (kbd "C-,")         'helm-calcul-expression)
   (global-set-key (kbd "C-x C-b")     'helm-buffers-list)
   (global-set-key (kbd "C-c f")       'helm-recentf)
   (global-set-key (kbd "C-x C-f")     'helm-find-files)
   (global-set-key (kbd "M-x")         'helm-M-x)
   (global-set-key (kbd "M-y")         'helm-show-kill-ring)
-  (global-set-key (kbd "C-c i")       'hhelm-imenu)
   (global-set-key (kbd "C-x b")       'helm-mini)
   (global-set-key (kbd "C-x C-f")     'helm-find-files)
-  (global-set-key (kbd "C-c h o")     'helm-occur)
+  (global-set-key (kbd "C-c o")       'helm-occur)
 
   (define-key global-map [remap jump-to-register]      'helm-register)
   (define-key global-map [remap list-buffers]          'helm-buffers-list)
