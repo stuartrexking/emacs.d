@@ -27,7 +27,7 @@
 (tool-bar-mode -1)
 
 ;; initial size
-(setq initial-frame-alist '((top . 0) (left . 0) (width . 275) (height . 100)))
+(setq initial-frame-alist '((top . 0) (left . 0) (width . 200) (height . 100)))
 
 ;; disable auto-save
 (setq auto-save-default nil)

@@ -7,3 +7,4 @@
   (define-key projectile-mode-map (kbd "C-,") 'helm-projectile))
 
 (add-to-list 'projectile-globally-ignored-directories "target")
+(add-to-list 'projectile-globally-ignored-directories "resources/public/js/compiled")

@@ -34,6 +34,7 @@
 (load "stu-projectile.el")
 (load "stu-solarized-theme.el")
 (load "stu-yasnippet.el")
+(load "stu-web-mode.el")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -41,7 +42,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (helm-projectile helm-ag helm avy yasnippet use-package solarized-theme rainbow-delimiters projectile parinfer paredit markdown-mode flx-ido company clojure-mode-extra-font-locking cider))))
+    (clj-refactor web-mode helm-projectile helm-ag helm avy yasnippet use-package solarized-theme rainbow-delimiters projectile parinfer paredit markdown-mode flx-ido company clojure-mode-extra-font-locking cider))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

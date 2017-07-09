@@ -1,6 +1,7 @@
 (require 'use-package)
 
 (use-package clojure-mode)
+(use-package clj-refactor)
 (use-package clojure-mode-extra-font-locking)
 (use-package cider
   :init
