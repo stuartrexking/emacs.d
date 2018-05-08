@@ -2,6 +2,10 @@
 
 (use-package helm
   :ensure t
+  :init
+  (setq helm-mode-fuzzy-match t)
+  (setq helm-completion-in-region-fuzzy-match t)
+  (setq helm-M-x-fuzzy-match t)
   :config
   ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
   ;; Changed to "C-c h". Note: We must set "C-c h" globally, because we

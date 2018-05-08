@@ -9,7 +9,7 @@
   (scroll-bar-mode -1))
 
 ;; increase font size for better readability
-(set-face-attribute 'default nil :height 110)
+(set-face-attribute 'default nil :height 140)
 
 ;; No cursor blinking, it's distracting
 (blink-cursor-mode 0)
@@ -27,7 +27,7 @@
 (tool-bar-mode -1)
 
 ;; initial size
-(setq initial-frame-alist '((top . 0) (left . 0) (width . 200) (height . 100)))
+(setq initial-frame-alist '((top . 0) (left . 0) (width . 220) (height . 160)))
 
 ;; disable auto-save
 (setq auto-save-default nil)
@@ -49,3 +49,15 @@
   "Kill up to, but not including ARGth occurrence of CHAR.")
 
 (global-set-key (kbd "M-z") 'zap-up-to-char)
+
+;; distinguish C-m from RET https://emacs.stackexchange.com/questions/20240/how-to-distinguish-c-m-from-return
+(define-key input-decode-map [?\C-m] [C-m])
+
+;; set the initial scratch buffer
+(setq initial-scratch-message "")
+
+;; move text
+(use-package move-text
+  :ensure t
+  :bind ("M-p" . move-text-up)
+        ("M-n" . move-text-down))
