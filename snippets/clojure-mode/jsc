@@ -1,0 +1,5 @@
+# -*- coding: utf-8 -*-
+# name: jsc
+# key: jsc
+# --
+(js/console.log $1)

@@ -1,0 +1,7 @@
+# name: rfx
+# key: rfx
+# --
+(reg-event-fx
+ $1
+ (fn [cofx [_ $2]]
+   $0))
