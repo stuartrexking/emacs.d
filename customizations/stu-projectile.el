@@ -4,7 +4,7 @@
   :init
   :config
   (projectile-global-mode)
-  (define-key projectile-mode-map (kbd "C-,") 'helm-projectile))
+  (setq projectile-completion-system 'ivy))
 
 (add-to-list 'projectile-globally-ignored-directories "target")
 (add-to-list 'projectile-globally-ignored-directories "resources/public/js/compiled")

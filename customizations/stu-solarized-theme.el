@@ -3,5 +3,5 @@
 (use-package solarized-theme
   :init
   :config
-  (load-theme 'solarized-light t))
+  (load-theme 'solarized-dark t))
 

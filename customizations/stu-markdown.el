@@ -4,3 +4,4 @@
   :ensure t
   :commands (markdown-mode gfm-mode)
   :mode (("\\.md\\'" . gfm-mode)))
+

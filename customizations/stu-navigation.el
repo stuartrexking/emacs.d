@@ -1,4 +1,4 @@
-(global-set-key (kbd "C-;") 'other-window)
+(global-set-key (kbd "C-.") 'other-window)
 (global-set-key (kbd "C-.") 'prev-window)
 
 (defun prev-window ()

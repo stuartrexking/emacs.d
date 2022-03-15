@@ -1,0 +1,16 @@
+(require 'use-package)
+
+(use-package crux
+  :bind (([remap move-beginning-of-line] . crux-move-beginning-of-line)
+         ("C-k" . crux-smart-kill-line)
+         ("C-s-<return>" . crux-smart-open-line-above)
+         ("s-<return>" . crux-smart-open-line)
+         ("C-c d" . crux-duplicate-current-line-or-region)
+         ("C-c I" . crux-find-user-init-file)
+         ("C-c S" . crux-find-shell-init-file)
+         ("s-j" . crux-top-join-line)
+         ("s-k" . crux-kill-whole-line)
+         ("C-<backspace>" . crux-kill-line-backwards)
+         ("C-x C-u" . crux-upcase-region)
+         ("C-x C-l" . crux-downcase-region)
+         ("C-x M-c" . crux-capitalize-region)))

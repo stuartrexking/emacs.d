@@ -1,6 +1,15 @@
 ;; Turn off the menu bar at the top of each frame because it's distracting
 (menu-bar-mode -1)
 
+;; Don't use hard tabs
+(setq-default indent-tabs-mode nil)
+
+;; Highlights matching parenthesis
+(show-paren-mode 1)
+
+;; Highlight current line
+(global-hl-line-mode 1)
+
 ;; Show line numbers
 (global-linum-mode)
 
@@ -11,8 +20,17 @@
 ;; increase font size for better readability
 (set-face-attribute 'default nil :height 140)
 
+;;set font to Jetbrains Mono
+(set-frame-font "Jetbrains Mono 15" nil t)
+
+;;full screen
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 ;; No cursor blinking, it's distracting
 (blink-cursor-mode 0)
+
+;; Disable electric indent mode
+(setq electric-indent-mode nil)
 
 ;; full path in title bar
 (setq-default frame-title-format "%b (%f)")
@@ -54,10 +72,24 @@
 (define-key input-decode-map [?\C-m] [C-m])
 
 ;; set the initial scratch buffer
-(setq initial-scratch-message "")
+(setq initial-scratch-message "Because America")
 
-;; move text
-(use-package move-text
-  :ensure t
-  :bind ("M-p" . move-text-up)
-        ("M-n" . move-text-down))
+;; configure the mode line
+(setq-default mode-line-format
+              '((:eval (propertize " %b " 'face
+                                   (if (buffer-modified-p)
+                                       '(:background "grey" :foreground "black" :weight bold)
+                                     'mode-line-highlight)))
+                " %l:%c %p %m "
+                (:propertize (vc-mode vc-mode) face (:weight normal))))
+
+;; typography
+(setq-default line-spacing nil)
+(setq mac-allow-anti-aliasing t)
+
+;; Better scrolling
+(setq redisplay-dont-pause t
+      scroll-margin 1
+      scroll-step 1
+      scroll-conservatively 10000
+      scroll-preserve-screen-position 1)
