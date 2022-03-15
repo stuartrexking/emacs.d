@@ -21,7 +21,7 @@
 (set-face-attribute 'default nil :height 140)
 
 ;;set font to Jetbrains Mono
-(set-frame-font "Jetbrains Mono 12" nil t)
+(set-frame-font "Jetbrains Mono 11" nil t)
 
 ;;full screen
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
