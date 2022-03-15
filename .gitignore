@@ -1,11 +1,11 @@
 *~
 *.*~
 *.swp
+/helm-adaptive-history
+/recentf
+/transient
+amx-items
 elpa
 ido.last
 projectile*
 session.*
-/transient
-/recentf
-/helm-adaptive-history
-amx-items

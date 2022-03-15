@@ -21,7 +21,7 @@
 (set-face-attribute 'default nil :height 140)
 
 ;;set font to Jetbrains Mono
-(set-frame-font "Jetbrains Mono 15" nil t)
+(set-frame-font "Jetbrains Mono 12" nil t)
 
 ;;full screen
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
@@ -74,17 +74,6 @@
 ;; set the initial scratch buffer
 (setq initial-scratch-message "Because America")
 
-;; configure the mode line
-(setq-default mode-line-format
-              '((:eval (propertize " %b " 'face
-                                   (if (buffer-modified-p)
-                                       '(:background "grey" :foreground "black" :weight bold)
-                                     'mode-line-highlight)))
-                " %l:%c %p %m "
-                (:propertize (vc-mode vc-mode) face (:weight normal))))
-
-;; typography
-(setq-default line-spacing nil)
 (setq mac-allow-anti-aliasing t)
 
 ;; Better scrolling
