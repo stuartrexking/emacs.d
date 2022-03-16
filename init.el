@@ -36,10 +36,11 @@
 (load "stu-paredit.el")
 (load "stu-pkg-info.el")
 (load "stu-rainbow-delimiters.el")
-(load "stu-themes")
-(load "stu-zprint")
-(load "stu-crux")
-(load "stu-super-save")
+(load "stu-themes.el")
+(load "stu-zprint.el")
+(load "stu-crux.el")
+(load "stu-super-save.el")
+(load "stu-focus.el")
 ;; (load "stu-yasnippet.el")
 ;; (load "stu-web-mode.el")
 (custom-set-variables
@@ -48,7 +49,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(doom-modeline super-save doom-themes crux counsel-projectile all-the-icons-ivy-rich markdown-mode pkg-info aggressive-indent use-package solarized-theme rainbow-delimiters projectile move-text magit idle-highlight-mode exec-path-from-shell counsel company clojure-mode-extra-font-locking clj-refactor avy amx ag)))
+   '(focus doom-modeline super-save doom-themes crux counsel-projectile all-the-icons-ivy-rich markdown-mode pkg-info aggressive-indent use-package solarized-theme rainbow-delimiters projectile move-text magit idle-highlight-mode exec-path-from-shell counsel company clojure-mode-extra-font-locking clj-refactor avy amx ag))
+ '(safe-local-variable-values '((cider-known-endpoints ("work" "localhost" "9000")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
