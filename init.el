@@ -19,6 +19,7 @@
 ;; load each customizations
 (load "stu-ag.el")
 (load "stu-avy.el")
+(load "stu-backups.el")
 (load "stu-bindings.el")
 (load "stu-aggressive-indent.el")
 (load "stu-clojure.el")
@@ -50,7 +51,14 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    '(focus doom-modeline super-save doom-themes crux counsel-projectile all-the-icons-ivy-rich markdown-mode pkg-info aggressive-indent use-package solarized-theme rainbow-delimiters projectile move-text magit idle-highlight-mode exec-path-from-shell counsel company clojure-mode-extra-font-locking clj-refactor avy amx ag))
- '(safe-local-variable-values '((cider-known-endpoints ("work" "localhost" "9000")))))
+ '(safe-local-variable-values
+   '((cider-known-endpoints
+      ("deft" "localhost" "7888"))
+     (cider-path-translations
+      ("/root/.m2" . "/Users/stuartrexking/.m2")
+      ("/root/code/" . "/Users/stuartrexking/Workspace/shopdeft/deft"))
+     (cider-known-endpoints
+      ("work" "localhost" "9000")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
