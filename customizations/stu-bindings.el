@@ -3,7 +3,10 @@
   (interactive "p")
   (yank-pop (- arg)))
 
-(global-set-key "\M-Y" 'yank-pop-forwards) ; M-Y (Meta-Shift-Y)
+(global-set-key (kbd "M-Y") 'yank-pop-forwards)
+(global-set-key (kbd "C-c j") 'previous-buffer)
+(global-set-key (kbd "C-c k") 'next-buffer)
+
 
 ;;toggle line comments with C-;
 (defun toggle-comment-on-line ()
@@ -17,4 +20,3 @@
   :ensure t
   :bind ("M-p" . move-text-up)
         ("M-n" . move-text-down))
-
