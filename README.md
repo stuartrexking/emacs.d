@@ -58,11 +58,11 @@ If you want to understand what's going on, read through the `init.el` and then e
 
 ### Control Keys ###
 
-When you see `M-<key>` it means to press the *Meta* key. On my Mac *Meta* is the `&#8997;` key.
+When you see `M-<key>` it means to press the *Meta* key. On my Mac *Meta* is the &#8997; key.
 
 When you see `C-<key>` it means to press the *Ctrl* key.
 
-When you see `s-<key>` it means to press the *Super* key. On my Mac *Super* is the `&#8984;` key.
+When you see `s-<key>` it means to press the *Super* key. On my Mac *Super* is the &#8984; key.
 
 ### Help ###
 
