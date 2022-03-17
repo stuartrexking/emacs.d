@@ -14,7 +14,8 @@
 	 ("C-x b" . ivy-switch-buffer)
 	 ("C-c v" . ivy-push-view)
 	 ("C-c V" . ivy-pop-view)
-	 ("C-c C-r" . ivy-resume))
+	 ("C-c C-r" . ivy-resume)
+         ("C-c s" . counsel-ag))
   :config
   (ivy-mode)
   (setq ivy-use-virtual-buffers t
