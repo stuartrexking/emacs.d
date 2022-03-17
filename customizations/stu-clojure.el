@@ -13,10 +13,13 @@
 
 (use-package clojure-mode
   :ensure t
-  :init
+  :config
   (setq-default display-fill-column-indicator-column 100)
   (setq clojure-indent-style :align-arguments)
-  (add-hook 'clojure-mode-hook (lambda () (display-fill-column-indicator-mode t))))
+  (add-hook 'clojure-mode-hook '(lambda ()
+                                  (display-fill-column-indicator-mode t)
+                                  (clj-refactor-mode 1)
+                                  (cljr-add-keybindings-with-prefix "C-c C-,"))))
 
 (use-package clojure-mode-extra-font-locking)
 

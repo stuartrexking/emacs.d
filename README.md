@@ -6,16 +6,29 @@ My [Emacs](https://www.gnu.org/software/Emacs/) configuration. It rocks.
 
 There are [many](https://www.gnu.org/software/Emacs/download.html) ways to install Emacs. I use [homebrew](https://formulae.brew.sh/cask/Emacs#default).
 
-## Packages ##
+## Configuration ##
+
+Emacs config is loaded from `~/.emacs.d`
+
+The entrypoint to Emacs config is the [Emacs Initialization File](https://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html) `init.el`.
+
+In my `init.el` I load all my libraries from each of the `~/.emacs.d/customizations/stu-*` files.
+
+Emacs configuration is simply a collection of functions and variables.
+
+If you want to understand what's going on, read through the `init.el` and then each of the `customizations/stu-*.el` files. It's easy to understand if you can read Clojure.
+
+## Packages Stu Loves: ##
 
 There are thousands of great Emacs packages. These are the few that I use. I'll try and keep this list up to date as best I can.
-
-### Packages Stu Loves: ###
 
   * [projectile](https://docs.projectile.mx/projectile/index.html) - a library for managing projects.
   * [ivy](https://oremacs.com/swiper/) - Made up of three packages - `ivy`, `swiper` and `counsel`. When active, `ivy-mode` completes the selection process by narrowing available choices while previewing in the minibuffer. Alternative packages are [helm](https://github.com/emacs-helm/helm) and [ido](https://www.gnu.org/software/emacs/manual/html_mono/ido.html). I like `ivy` the most.
   * [counsel-projectile](https://github.com/ericdanan/counsel-projectile) - Projectile has native support for ivy. `counsel-projectile` provides further integration by taking advantage of `ivy's` support for selecting from a list of actions and applying the action without leaving the session.
   * [company-mode](https://company-mode.github.io) - A text completion framework for *completion at point*, meaning completion in ordinary buffers.
+  * [clojure-mode](https://github.com/clojure-emacs/clojure-mode) - An Emacs major mode that provides font-lock (syntax highlighting), indentation, navigation and refactoring support for the Clojure(Script) programming language. There is a section dedicated to it below.
+  * [CIDER](https://docs.cider.mx/cider/index.html) - CIDER extends Emacs with support for interactive programming in Clojure. There is a section dedicated to it below.
+  * [clj-refactor](https://github.com/clojure-emacs/clj-refactor.el) - clj-refactor provides powerful refactoring functionality for Clojure projects. It complements the refactoring functionality you'd find in clojure-mode and CIDER. There is a section dedicated to it below.
   * [magit](https://magit.vc) - The very best way to work with `git`. I love this package.
   * [markdown-mode](https://jblevins.org/projects/markdown-mode/) - A major mode for editing markdown files. So good.
   * [crux](https://github.com/bbatsov/crux) - crux bundles many useful interactive commands to enhance your overall Emacs experience.
@@ -41,18 +54,6 @@ Fonts:
   * [FiraCode](https://github.com/tonsky/FiraCode) - Another excellent font. 
   
 Both these fonts provide ligatures if that's your thing.
-
-## Configuration ##
-
-Emacs config is loaded from `~/.emacs.d`
-
-The entrypoint to Emacs config is the [Emacs Initialization File](https://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html) `init.el`.
-
-In my `init.el` I load all my libraries from each of the `~/.emacs.d/customizations/stu-*` files.
-
-Emacs configuration is simply a collection of functions and variables.
-
-If you want to understand what's going on, read through the `init.el` and then each of the `customizations/stu-*.el` files. It's easy to understand if you can read Clojure.
 
 ## Some pointers to get up to speed quickly ##
 
@@ -158,7 +159,7 @@ Each of these options has further options. If you want to see those options use 
  * `C-c p b` bound to `counsel-projectile-switch-to-buffer` to switch to a project buffer.
  * `C-c p s s` bound to `counsel-projectile-ag` to search the project files using `ag`. Very useful.
 
-## Markdown
+### Markdown ###
 
 The [docs](https://jblevins.org/projects/markdown-mode/) are ok, worth reading once. I find the built-in command list better.
 
@@ -170,3 +171,64 @@ The [docs](https://jblevins.org/projects/markdown-mode/) are ok, worth reading o
  
 There are many more commands. Read the docs.
 
+## Clojure ##
+
+### clojure-mode ###
+
+[Docs](https://github.com/clojure-emacs/clojure-mode)
+
+Pretty much everything is configurable. To see a list of available configuration options do `M-x customize-group RET clojure`.
+
+`clojure-mode` can handle indentation and alignment. I'm using zprint for pretty printing and formatting so I don't worry too much about this configuration.
+
+`clojure-mode` also provides [refactoring support](https://github.com/clojure-emacs/clojure-mode#refactoring-support). The [docs](https://github.com/clojure-emacs/clojure-mode#refactoring-support) prvide examples.
+
+It's worth checking out the [related packages](https://github.com/clojure-emacs/clojure-mode#related-packages) section of the docs.
+
+### CIDER ###
+
+**CIDER (Clojure(Script) Interactive Development Environment that Rocks!)**
+
+[Docs](https://docs.cider.mx/cider/index.html)
+
+The main reason for doing Clojure develoment on Emacs. 
+
+CIDER [provides](https://docs.cider.mx/cider/usage/cider_mode.html) alot of great features. The main feature is being able to connect and interact with a running [nREPL](https://nrepl.org/nrepl/0.9/index.html).
+
+There are many ways to interact with a REPL in CIDER. The two main ones are:
+
+  * `cider-jack-in` which start an nREPL using your projects configuration and will inject the necessary middleware.
+  * `cider-connect-clj` which will connect to an existing nREPL server. The middle must be already configured.
+  
+The instructions for setting up the middleware is [here](https://docs.cider.mx/cider/basics/middleware_setup.html).
+
+CIDER has [many](https://practical.li/spacemacs/reference/cider/configuration-variables.html) configuration options.
+
+You can configure [project specific configuration](https://docs.cider.mx/cider/config/project_config.html).
+
+If you are running your nREPL in a Docker container, add this to your project `.dir-locals.el` to map the directories correctly for CIDER. If you don't do this you will not be able to find symbol definitions and move around easily.
+
+``` emacs-lisp
+((nil
+  (cider-path-translations . (("/root/.m2" . "/Users/stuartrexking/.m2")
+                              ("/root/code/" . "/Users/stuartrexking/Workspace/shopdeft/deft"))))
+ (clojure-mode
+  ;; a list of connection endpoints, each endpoint is a list
+  (cider-known-endpoints . (("deft" "localhost" "7888")))))
+```
+
+Checkout [all the things](https://docs.cider.mx/cider/usage/cider_mode.html) you can do with CIDER once you are connected. 
+
+### clj-refactor ###
+
+[Docs](https://github.com/clojure-emacs/clj-refactor.el)
+
+`clj-refactor` provides powerful refactoring functionality for Clojure projects.
+
+The important thing to understand is how the middleware is configured and enables `clj-refactor`.
+
+To use `clj-refactor` you must be connected to a REPL.
+
+My `clj-refactor` keybinding is `C-c C-,`
+
+See the [wiki](https://github.com/clojure-emacs/clj-refactor.el/wiki) for a list of refactorings.
