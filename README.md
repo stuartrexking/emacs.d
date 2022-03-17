@@ -4,7 +4,7 @@ My [Emacs](https://www.gnu.org/software/Emacs/) configuration. It rocks.
 
 ## Installation ##
 
-[Lot's](https://www.gnu.org/software/Emacs/download.html) of ways to install Emacs. I install using [homebrew](https://formulae.brew.sh/cask/Emacs#default).
+There are [many](https://www.gnu.org/software/Emacs/download.html) ways to install Emacs. I use [homebrew](https://formulae.brew.sh/cask/Emacs#default).
 
 ## Packages ##
 
@@ -13,10 +13,10 @@ There are thousands of great Emacs packages. These are the few that I use. I'll 
 ### Packages Stu Loves: ###
 
   * [projectile](https://docs.projectile.mx/projectile/index.html) - a library for managing projects.
-  * [ivy](https://oremacs.com/swiper/) - Made up of three packages - ivy, swiper and counsel. When active, ivy-mode completes the selection process by narrowing available choices while previewing in the minibuffer. Alternative packages are [helm](https://github.com/emacs-helm/helm) and [ido](https://www.gnu.org/software/emacs/manual/html_mono/ido.html). I like `ivy` the most.
+  * [ivy](https://oremacs.com/swiper/) - Made up of three packages - `ivy`, `swiper` and `counsel`. When active, `ivy-mode` completes the selection process by narrowing available choices while previewing in the minibuffer. Alternative packages are [helm](https://github.com/emacs-helm/helm) and [ido](https://www.gnu.org/software/emacs/manual/html_mono/ido.html). I like `ivy` the most.
   * [counsel-projectile](https://github.com/ericdanan/counsel-projectile) - Projectile has native support for ivy. `counsel-projectile` provides further integration by taking advantage of `ivy's` support for selecting from a list of actions and applying the action without leaving the session.
   * [company-mode](https://company-mode.github.io) - A text completion framework for *completion at point*, meaning completion in ordinary buffers.
-  * [magit](https://magit.vc) - The very best way to work with git. I love this package.
+  * [magit](https://magit.vc) - The very best way to work with `git`. I love this package.
   * [markdown-mode](https://jblevins.org/projects/markdown-mode/) - A major mode for editing markdown files. So good.
   * [crux](https://github.com/bbatsov/crux) - crux bundles many useful interactive commands to enhance your overall Emacs experience.
   * [doom-themes](https://github.com/doomemacs/themes) - amazing collection of themes. I'm currenctly using [doom-vibrant](https://github.com/doomemacs/themes/blob/screenshots/doom-vibrant.png).
@@ -88,18 +88,18 @@ I have also setup `C-;` as a custom binding for `prev-window` for quickly jumpin
 
 ### Emacs ###
 
-`M->` bound to `end-of-buffer` to move to end of buffer.
-`M-<` bound to `beginning-of-buffer` to  move to start of buffer.
-`C-x C-c` bound to `save-buffers-kill-terminal` to save and quit Emacs.
-`C-a C-SPC` with `C-n` or `C-p` to mark lines up and down.
-`C-x h` to select entire buffer then `M-x write-file` to save as a new file.
-`M-x revert-buffer` to revert the buffer to it's last save.
-`M-p` to move the line up. See *stu-bindings.el*. Not bound in markdown-mode.
-`M-n` to move the line down. See *stu-bindings.el*. Not bound in markdown-mode.
-`C-;` bound to `prev-window` to jump to the previous window.
-`C-.` to comment a line.
-`M-j` bound to `previous-buffer` to show the previous buffer in the window.
-`M-k` bound to `next-buffer` to show the next buffer in the window.
+ * `M->` bound to `end-of-buffer` to move to end of buffer.
+ * `M-<` bound to `beginning-of-buffer` to  move to start of buffer.
+ * `C-x C-c` bound to `save-buffers-kill-terminal` to save and quit Emacs.
+ * `C-a C-SPC` with `C-n` or `C-p` to mark lines up and down.
+ * `C-x h` to select entire buffer then `M-x write-file` to save as a new file.
+ * `M-x revert-buffer` to revert the buffer to it's last save.
+ * `M-p` to move the line up. See *stu-bindings.el*. Not bound in markdown-mode.
+ * `M-n` to move the line down. See *stu-bindings.el*. Not bound in markdown-mode.
+ * `C-;` bound to `prev-window` to jump to the previous window.
+ * `C-.` to comment a line.
+ * `M-j` bound to `previous-buffer` to show the previous buffer in the window.
+ * `M-k` bound to `next-buffer` to show the next buffer in the window.
 
 ### Avy ###
 
@@ -143,9 +143,9 @@ Projectile manages projects. The manual is good so read it.
 
 Projectile and Counsel play nicely through the `counsel-projectile` package, which basically overloads all the default projectile functions.
 
-[Docs](https://docs.projectile.mx/projectile/index.html)
-[Projectile Interactive Commands](https://docs.projectile.mx/projectile/usage.html#interactive-commands)
-[Counsel Projectile](https://github.com/ericdanan/counsel-projectile)
+ * [Docs](https://docs.projectile.mx/projectile/index.html)
+ * [Projectile Interactive Commands](https://docs.projectile.mx/projectile/usage.html#interactive-commands)
+ * [Counsel Projectile](https://github.com/ericdanan/counsel-projectile)
 
 Each of these options has further options. If you want to see those options use `M-o` after you have triggered any of these:
 
@@ -158,7 +158,7 @@ Each of these options has further options. If you want to see those options use 
 
 ## Markdown
 
-The [docs](https://jblevins.org/projects/markdown-mode/) are ok. I find the help better.
+The [docs](https://jblevins.org/projects/markdown-mode/) are ok, worth reading once. I find the built-in command list better.
 
  * `C-c C-h` bound to `TDB` show all the markdown commands.
  * `C-c C-s` is the styling prefix. `b` for **bold**, `i` for *italic* etc. Check the menu in the minubuffer for more options.
