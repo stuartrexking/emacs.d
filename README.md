@@ -52,6 +52,8 @@ In my `init.el` I load all my libraries from each of the `~/.emacs.d/customizati
 
 Emacs configuration is simply a collection of functions and variables.
 
+If you want to understand what's going on, read through the `init.el` and then each of the `customizations/stu-*.el` files. It's easy to understand if you can read Clojure.
+
 ## Some pointers to get up to speed quickly ##
 
 ### Control Keys ###
