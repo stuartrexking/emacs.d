@@ -45,3 +45,10 @@
 (use-package ivy-rich
   :ensure t
   :init (ivy-rich-mode 1))
+
+;; show minibuffer in a posframe
+(use-package ivy-posframe
+  :ensure t
+  :config
+  (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-frame-center)))
+  (ivy-posframe-mode 1))

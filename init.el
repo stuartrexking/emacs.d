@@ -50,7 +50,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(kaolin-themes focus doom-modeline super-save doom-themes crux counsel-projectile all-the-icons-ivy-rich markdown-mode pkg-info aggressive-indent use-package solarized-theme rainbow-delimiters projectile move-text magit idle-highlight-mode exec-path-from-shell counsel company clojure-mode-extra-font-locking clj-refactor avy amx ag))
+   '(ivy-posframe kaolin-themes focus doom-modeline super-save doom-themes crux counsel-projectile all-the-icons-ivy-rich markdown-mode pkg-info aggressive-indent use-package solarized-theme rainbow-delimiters projectile move-text magit idle-highlight-mode exec-path-from-shell counsel company clojure-mode-extra-font-locking clj-refactor avy amx ag))
  '(safe-local-variable-values
    '((cider-known-endpoints
       ("deft" "localhost" "7888"))
