@@ -1,5 +1,12 @@
 (require 'use-package)
 
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode))
+
+(use-package flycheck-clj-kondo
+  :ensure t)
+
 (use-package cider
   :ensure t
   :init
@@ -14,6 +21,7 @@
 (use-package clojure-mode
   :ensure t
   :config
+  (require 'flycheck-clj-kondo)
   (setq-default display-fill-column-indicator-column 100)
   (setq clojure-indent-style :align-arguments)
   (add-hook 'clojure-mode-hook '(lambda ()
