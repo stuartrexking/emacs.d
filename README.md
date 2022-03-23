@@ -4,7 +4,7 @@ My [Emacs](ihttps://www.gnu.org/software/emacs/) configuration. It rocks.
 
 ## Installation ##
 
-There are [many](https://www.gnu.org/software/Emacs/download.html) ways to install Emacs. I use [homebrew](https://formulae.brew.sh/cask/Emacs#default).
+There are [many](https://www.gnu.org/software/emacs/download.html) ways to install Emacs. I use [homebrew](https://formulae.brew.sh/cask/emacs#default).
 
 ## Configuration ##
 
