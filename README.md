@@ -1,6 +1,6 @@
 # Emacs #
 
-My [Emacs](https://www.gnu.org/software/Emacs/) configuration. It rocks.
+My [Emacs](ihttps://www.gnu.org/software/emacs/) configuration. It rocks.
 
 ## Installation ##
 

@@ -41,7 +41,6 @@
 (load "stu-zprint.el")
 (load "stu-crux.el")
 (load "stu-super-save.el")
-(load "stu-focus.el")
 ;; (load "stu-yasnippet.el")
 ;; (load "stu-web-mode.el")
 (custom-set-variables
