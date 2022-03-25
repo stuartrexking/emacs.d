@@ -25,6 +25,7 @@
   (setq-default display-fill-column-indicator-column 100)
   (setq clojure-indent-style :align-arguments)
   (add-hook 'clojure-mode-hook '(lambda ()
+                                  (zprint-mode)
                                   (display-fill-column-indicator-mode t)
                                   (clj-refactor-mode 1)
                                   (cljr-add-keybindings-with-prefix "C-c C-,"))))
