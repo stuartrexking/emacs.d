@@ -22,6 +22,7 @@
 (load "stu-backups.el")
 (load "stu-bindings.el")
 (load "stu-aggressive-indent.el")
+(load "stu-zprint.el")
 (load "stu-clojure.el")
 (load "stu-company.el")
 (load "stu-editor.el")
@@ -38,7 +39,6 @@
 (load "stu-pkg-info.el")
 (load "stu-rainbow-delimiters.el")
 (load "stu-themes.el")
-(load "stu-zprint.el")
 (load "stu-crux.el")
 (load "stu-super-save.el")
 ;; (load "stu-yasnippet.el")
@@ -52,6 +52,8 @@
    '(flycheck-clj-kondo flycheck cl ivy-posframe kaolin-themes focus doom-modeline super-save doom-themes crux counsel-projectile all-the-icons-ivy-rich markdown-mode pkg-info aggressive-indent use-package solarized-theme rainbow-delimiters projectile move-text magit idle-highlight-mode exec-path-from-shell counsel company clojure-mode-extra-font-locking clj-refactor avy amx ag))
  '(safe-local-variable-values
    '((cider-known-endpoints
+      ("redis-graph-play" "localhost" "9000"))
+     (cider-known-endpoints
       ("deft" "localhost" "7888"))
      (cider-path-translations
       ("/root/.m2" . "/Users/stuartrexking/.m2")
