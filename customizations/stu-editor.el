@@ -83,3 +83,6 @@
       scroll-step 1
       scroll-conservatively 10000
       scroll-preserve-screen-position 1)
+
+;; When you visit a file, point goes to the last place where it was when you previously visited the same file.
+(save-place-mode 1)
